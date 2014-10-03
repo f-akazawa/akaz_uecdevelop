@@ -29,11 +29,4 @@ $(function() {
         },onServerLoad: function(e, file) {
             //$("#" + slugify(file.name)).find(".progressbar").progressbar({value: 100});
         }});
-    $(".download")
-    .mousedown(function() {
-        $(this).css({"background-image": "url('images/download-clicked.png')"});
-    })
-    .mouseup(function() {
-        $(this).css({"background-image": "url('images/download.png')"});
-    });
 });

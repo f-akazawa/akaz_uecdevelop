@@ -7,15 +7,19 @@ $(function() {
 
     });
 
-    $('.dragTarget').on('dragstart', function(e) {
+    $('.dragTarget').on('dragstart', function (e) {
 
         // this は p.dragTarget のうち今ドラッグしてるもの
         dragSrcEl = this;
         console.log(this);
 
     });
-
-    // ドラッグエリアに要素を追加，ドラッグエリアから要素をダブルクリックで削除
+    
+    $('#upload').on('dragstart','.dragTarget',function(e){
+        dragSrcEl = this;
+    });
+    
+     // ドラッグエリアに要素を追加，ドラッグエリアから要素をダブルクリックで削除
     $('#draggableArea').on('dragover', function(e) {
 
         e.preventDefault();
@@ -27,6 +31,9 @@ $(function() {
         }
 
         if(dragSrcEl != this) {
+
+            //dragSrcEl = this;
+            
             // this は div#draggableArea
             $('#'+this.id).append("<div class='draggable'><p>"+dragSrcEl.innerText+"</p></div>");
         }
