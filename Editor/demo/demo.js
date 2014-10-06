@@ -2,7 +2,7 @@ jsPlumb.ready(function() {
 
 	// setup some defaults for jsPlumb.
 	var instance = jsPlumb.getInstance({
-		Endpoint : ["Dot", {radius:2}],
+		Endpoint : ["Dot", {radius:3}],
 		HoverPaintStyle : {strokeStyle:"#1e8151", lineWidth:2 },
 		ConnectionOverlays : [
 			[ "Arrow", {
@@ -11,7 +11,7 @@ jsPlumb.ready(function() {
                 length:14,
                 foldback:0.8
 			} ],
-            [ "Label", { label:"FOO", id:"label", cssClass:"aLabel" }]
+            [ "Label", { label:"DATA-FLOW", id:"label", cssClass:"aLabel" }]
 		],
 		Container:"statemachine-demo"
 	});

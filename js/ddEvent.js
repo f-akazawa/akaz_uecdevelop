@@ -33,11 +33,8 @@ $(function() {
         }
 
         if(dragSrcEl != this) {
-
-            //dragSrcEl = this;
-            
             // this は div#draggableArea
-            $('#'+this.id).append("<div class='draggable'><p class='border'>"+dragSrcEl.innerText+"</p></div>");
+            $('#'+this.id).append("<div class='draggable'><p>"+dragSrcEl.innerText+"</p></div>");
         }
 
         $('.draggable').each(function() {
